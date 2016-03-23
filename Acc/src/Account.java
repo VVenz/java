@@ -5,7 +5,7 @@ class Account {
 	String tel;
 	String address;
 	double money;
-	String moneyString = Double.toString(money);
+	
 }
 
 /*

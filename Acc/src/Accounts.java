@@ -5,8 +5,8 @@ class Accounts{
 
     public static void main (String [] args){
     	
-    int numbers = 2;
-   
+    int numbers = 3;
+    
     	
     Account acc[] = new Account[numbers];
     
@@ -16,7 +16,7 @@ class Accounts{
 	
 	acc[0].name = "Ana Maria Leja";
 	acc[0].passportNum = "AAM568890";
-	acc[0].tel = "+9876576889";
+	acc[0].tel = "+9866576781";
 	acc[0].address = "Triq Antigua, 5 MLT";
 	acc[0].money = 20089.87;
 
@@ -25,6 +25,14 @@ class Accounts{
 	acc[1].tel = "+9882563625";
 	acc[1].address = "Green street, 23-15 LA";
 	acc[1].money = 100293.32;
+	
+	acc[2].name = "Jennifer Claudia Stone";
+	acc[2].passportNum = "ADR378049";
+	acc[2].tel = "+9872553689";
+	acc[2].address = "Park street, 2-10 NY";
+	acc[2].money = 993.33;
+	
+	String []moneyString = new String [numbers]; 
 	
 	JFrame frame = new JFrame ("Customers base");
 	JPanel mainPanel = new JPanel ();
@@ -46,7 +54,9 @@ class Accounts{
         			label[1] [ind] = new JLabel (acc[ind].passportNum);
         			label[2] [ind] = new JLabel (acc[ind].tel);
         			label[3] [ind] = new JLabel (acc[ind].address);
-        			label[4] [ind] = new JLabel (acc[ind].moneyString);
+        			
+        			moneyString[ind] = Double.toString(acc[ind].money);
+        			label[4] [ind] = new JLabel (moneyString[ind]);
         			
         			for (int ind1 = 0; ind1 < 5; ind1++) {
             			panel[ind].add(label[ind1][ind]);
@@ -57,7 +67,7 @@ class Accounts{
     			
     			frame.setContentPane(mainPanel);
     		
-    			frame.setSize (700, 600);
+    			frame.setSize (1100, 900);
     			frame.pack();
     			frame.setVisible (true);
 	}
